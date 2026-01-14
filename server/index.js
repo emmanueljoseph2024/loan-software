@@ -51,4 +51,10 @@ app.use("/api/v1/account", detailsRoute);
 app.use('/api/v1/admin', adminRouter);
 
 
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 export default app;
