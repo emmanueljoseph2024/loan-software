@@ -30,6 +30,21 @@ import detailsRoute from "./routes/detailsRoute.js";
 import adminRouter from  './routes/adminRoutes.js';
 
 
+
+// Example API route
+app.get("/api/hello", (req, res) => {
+  res.json({ message: "Hello from backend!" });
+});
+
+// Serve static Vite build
+app.use(express.static(path.join(__dirname, "../loan-app/dist")));
+
+// SPA fallback: send index.html for any unknown route
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../loan-app/dist/index.html"));
+});
+
+
 //test cloudinary
 app.get('/test-cloudinary', async (req, res) => {
   try {
@@ -39,6 +54,7 @@ app.get('/test-cloudinary', async (req, res) => {
     res.status(500).json({ message: 'Cloudinary connection failed', error: err.message });
   }
 });
+
 
 //useroutes
 app.use('/api/v1/signup', signupRoute);
