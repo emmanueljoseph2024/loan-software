@@ -3,7 +3,7 @@ import styles from './homepageStyles/homepage.module.css'
 import api from "../utils/axiosConfig.js";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from 'reaact-router-dom'
 const UserForm = () => {
       const bankDetails = {
         name:'',
@@ -46,6 +46,7 @@ const UserForm = () => {
 
   return (
     <div>
+          <h1 className={styles.alreadyFilled}>Already filled this? Navigate to the <Link to='/homepage' className={styles.homepageLink}>Homepage</Link></h1>
       <div className={styles.bankDetailsContainer}>
         {error ? <p className={styles.error}>{error}</p> : ''}
         <h1>Bank Details</h1>
