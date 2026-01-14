@@ -44,7 +44,7 @@ creditScore: {
     },
      principal: {type: Number, default:0},
   interest: Number,
-  totalPayable: Number,
+  totalPayable: {type:Number, default:0},
   dueDate: Date,
     status: {
       type: String,

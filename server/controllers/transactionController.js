@@ -160,7 +160,7 @@ if(!user){
 
 const recipient = await User.findOne({user:userId});
 if(!recipient){
-  return res.status(404).json({message:'Recipient not found'})
+  return res.status(404).json({message:'Add your details in the user section'})
 }
 
 const recipientStatus = recipient.loan.totalPayable;
