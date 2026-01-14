@@ -103,7 +103,7 @@ const KYCForm = () => {
     try {
       const res = await api.post(`/api/v1/kyc/create`, formData);
       toast.success(res.data.message);
-      navigate("/homepage");
+      navigate("/userform");
     } catch (err) {
       console.error(err);
       toast.error(err.response?.data?.message || "Error submitting KYC");

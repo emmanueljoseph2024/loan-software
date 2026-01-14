@@ -207,9 +207,9 @@ getStatus();
         <div></div>
         <div className={styles.cardContainer}>
           <div className={styles.card}>
-            {status?.userStatus === 0 ? <h2 style={{color:'#35cca7'}}>Available amount</h2> : <h2 style={{color:'rgb(213, 42, 42)'}}>Insufficient fund</h2> }
+            { status?.userStatus === 0  ? <h2 style={{color:'#35cca7'}}>Available amount</h2> : <h2 style={{color:'rgb(213, 42, 42)'}}>Insufficient fund</h2> }
             <h1>{status?.userStatus === 0 ? `$${status?.eligibleAmount}` : <span style={{color:'red', fontSize:'3rem'}}>-${status?.userStatus}</span>}</h1>
-            {status?.userStatus === 0 ? (
+            { status?.userStatus === 0 ? (
               <button className={styles.borrowBtn} onClick={transaction}>
                 Borrow
               </button>

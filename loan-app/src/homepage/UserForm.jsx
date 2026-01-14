@@ -2,6 +2,7 @@ import { useState, useEffect} from 'react'
 import styles from './homepageStyles/homepage.module.css'
 import api from "../utils/axiosConfig.js";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 
 const UserForm = () => {
       const bankDetails = {
@@ -14,6 +15,8 @@ const UserForm = () => {
 
       const [accountDetails, setAccountDetails] = useState(bankDetails);
       const [error, setError] = useState('')
+
+      const navigate = useNavigate()
      
       const postBankDetails = async(e)=>{
         try{
@@ -24,7 +27,7 @@ const UserForm = () => {
       Authorization: `Bearer ${token}`
     }});
         toast.success('Posted successfully');
-        
+        navigate('/homepage');
         }
         catch(error){
            toast.error(error.response?.data?.message || 'Error sending details');
