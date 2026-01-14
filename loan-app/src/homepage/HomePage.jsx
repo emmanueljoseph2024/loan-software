@@ -19,7 +19,7 @@ const HomePage = () => {
   const [visible, setVisible] = useState(false);
   const [shownav, setShowNav] = useState(false)
 
-  const API_BASE = `${import.meta.env.VITE_API_URL}/api/v1/kyc`;
+  const API_BASE = `/api/v1/kyc`;
 
   //fetchkyc details
   const fetchUserKYC = async () => {
@@ -52,7 +52,7 @@ const HomePage = () => {
       const kycId = kyc._id; // get the KYC document ID from the state
 
       const res = await api.post(
-        `${import.meta.env.VITE_API_URL}/api/v1/idnorm/start`,
+        `/api/v1/idnorm/start`,
         { kycId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -71,7 +71,7 @@ const HomePage = () => {
       const token = localStorage.getItem("token");
 
       const response = await api.post(
-        `${import.meta.env.VITE_API_URL}/api/v1/transaction/transfer`,
+        `/api/v1/transaction/transfer`,
         {},
         {
           headers: {
@@ -93,7 +93,7 @@ const HomePage = () => {
   const getStatus = async()=>{
     try{
      const token = localStorage.getItem('token');
-     const response = await api.get(`${import.meta.env.VITE_API_URL}/api/v1/transaction/status`,
+     const response = await api.get(`/api/v1/transaction/status`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

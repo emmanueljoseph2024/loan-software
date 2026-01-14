@@ -12,7 +12,7 @@ const UserDashboard = () => {
       const token = localStorage.getItem("token");
 
       const response = await api.get(
-        `${import.meta.env.VITE_API_URL}/api/v1/transaction/user`,
+        `/api/v1/transaction/user`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

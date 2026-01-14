@@ -21,7 +21,7 @@ const Repay = () => {
     }
     try{
       const token = localStorage.getItem('token');
-      const response = await api.post(`${import.meta.env.VITE_API_URL}/api/v1/transaction/repay`, {amount}, {
+      const response = await api.post(`/api/v1/transaction/repay`, {amount}, {
      headers: {
       Authorization: `Bearer ${token}`
      }

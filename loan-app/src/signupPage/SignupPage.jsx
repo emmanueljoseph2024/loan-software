@@ -157,7 +157,7 @@ const handleSubmit = async(e) => {
   setError("");
 
   await api
-      .post(`${import.meta.env.VITE_API_URL}/api/v1/signup/signup`, user)
+      .post(`/api/v1/signup/signup`, user)
       .then((response) => {
         toast.success(response.data.message, { position: "top-right" });
         navigate("/login");

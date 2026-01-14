@@ -11,7 +11,7 @@ const [loading, setLoading] = useState(true);
 const getTransaction = async()=>{
     try{
         const token = localStorage.getItem('token');
-const response = await api.get(`${import.meta.env.VITE_API_URL}/api/v1/transaction/history`,{
+const response = await api.get(`/api/v1/transaction/history`,{
     headers: {
         Authorization: `Bearer ${token}`,
     },

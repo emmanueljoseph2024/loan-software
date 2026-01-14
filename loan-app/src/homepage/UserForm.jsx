@@ -19,7 +19,7 @@ const UserForm = () => {
         try{
           e.preventDefault();
             const token = localStorage.getItem("token"); // JWT token
-        const response = await api.post(`${import.meta.env.VITE_API_URL}/api/v1/account/accountdetails`, accountDetails, {
+        const response = await api.post(`/api/v1/account/accountdetails`, accountDetails, {
     headers: {
       Authorization: `Bearer ${token}`
     }});

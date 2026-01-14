@@ -101,7 +101,7 @@ const KYCForm = () => {
     setError("");
 
     try {
-      const res = await api.post(`${import.meta.env.VITE_API_URL}/api/v1/kyc/create`, formData);
+      const res = await api.post(`/api/v1/kyc/create`, formData);
       toast.success(res.data.message);
       navigate("/homepage");
     } catch (err) {

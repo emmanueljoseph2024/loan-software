@@ -41,7 +41,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await api
-      .post(`${import.meta.env.VITE_API_URL}/api/v1/login/login`, user)
+      .post(`/api/v1/login/login`, user)
       .then((response) => {
         toast.success(response.data.message, { position: "top-right" });
         navigate("/kyc");

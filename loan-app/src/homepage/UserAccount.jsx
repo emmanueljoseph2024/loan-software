@@ -7,7 +7,7 @@ const UserAccount = () => {
        const [kyc, setKyc] = useState(null)
        const [accountDetails, setAccountDetails] = useState(null)
 
-    const API_BASE = `${import.meta.env.VITE_API_URL}/api/v1/kyc`;
+    const API_BASE = `/api/v1/kyc`;
 
 
     const fetchUserKYC = async () => {
@@ -33,7 +33,7 @@ useEffect(() => {
   const fetchAccountDetails = async()=>{
    try{
         const token = localStorage.getItem("token"); // JWT token
-       const response = await api.get(`${import.meta.env.VITE_API_URL}/api/v1/account/accountdetails`, {
+       const response = await api.get(`/api/v1/account/accountdetails`, {
     headers: {
       Authorization: `Bearer ${token}`
     }} );
