@@ -3,7 +3,7 @@ import styles from './homepageStyles/homepage.module.css'
 import api from "../utils/axiosConfig.js";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
-import { Link } from 'reaact-router-dom'
+import { Link } from 'react-router-dom'
 const UserForm = () => {
       const bankDetails = {
         name:'',
