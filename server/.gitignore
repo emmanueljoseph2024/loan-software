@@ -1,0 +1,26 @@
+# Node modules (backend + frontend)
+node_modules/
+server/node_modules/
+loan-app/node_modules/
+
+# Vite build output
+loan-app/dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables (secrets)
+.env
+server/.env
+loan-app/.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: local editor settings
+.vscode/
+.idea/
