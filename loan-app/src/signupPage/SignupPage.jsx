@@ -139,7 +139,10 @@ const SignupPage = () => {
             </div>
           </div>
 
-          <button type="submit">Sign Up</button>
+<div className={styles.inputBox}>
+  <button type="submit">Sign Up</button>
+</div>
+        
         </form>
       </div>
 

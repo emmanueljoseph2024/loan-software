@@ -7,7 +7,7 @@ import "nprogress/nprogress.css";
 NProgress.configure({ showSpinner: true });
 
 const api = axios.create({
-  baseURL: "http://localhost:9000/api/v1",
+  baseURL: "//loan-software.onrender.com",
 });
 
 // Request interceptor → start progress bar

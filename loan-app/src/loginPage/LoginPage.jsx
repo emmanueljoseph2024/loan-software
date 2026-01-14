@@ -91,7 +91,9 @@ const LoginPage = () => {
             </div>
           </div>
 
-          <button type="submit">Login</button>
+<div className={styles.inputBox}>
+<button type="submit">Login</button>
+</div>      
         </form>
       </div>
     </div>
