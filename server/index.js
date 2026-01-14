@@ -3,6 +3,9 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import bodyParser from 'body-parser'
 import morgan from 'morgan'
+import path from "path";
+import { fileURLToPath } from "url";
+
 
 //Import DB connection and cloudinary
 import connectDB from './config/db.js';
@@ -35,6 +38,10 @@ import adminRouter from  './routes/adminRoutes.js';
 app.get("/api/hello", (req, res) => {
   res.json({ message: "Hello from backend!" });
 });
+
+// Fix __dirname in ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Serve static Vite build
 app.use(express.static(path.join(__dirname, "../loan-app/dist")));
