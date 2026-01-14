@@ -1,26 +1,30 @@
 {
+  "initialCommand": "npm install --legacy-peer-deps",
   "version": 2,
   "builds": [
     {
-      "src": "api/index.js",
+      "src": "index.js",
       "use": "@vercel/node"
     },
     {
-      "src": "client/package.json",
+      "src": "loan-app/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "client/dist"
+        "distDir": "loan-app/dist"
       }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/index.js"
+      "dest": "index.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/client/dist/$1"
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/loan-app/dist/index.html"
     }
   ]
 }
