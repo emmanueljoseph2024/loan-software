@@ -1,5 +1,5 @@
 import styles from './signuppageStyles/signup.module.css'
-import signupImg from '../assets/signupImg.png'
+import signupImg from '../assets/signupimg.png'
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";import React from "react";

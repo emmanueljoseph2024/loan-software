@@ -1,4 +1,4 @@
-import loginImg from '../assets/signupImg.png'
+import loginImg from '../assets/signupimg.png'
 import styles from './loginpageStyles/loginpage.module.css'
 import { useState } from 'react'
 import { FaEye } from "react-icons/fa";
