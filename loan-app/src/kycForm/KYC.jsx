@@ -113,7 +113,7 @@ const KYCForm = () => {
 //stop
   return (
     <form className={styles.kycForm} onSubmit={handleSubmit}>
-      <h1 className={styles.alreadyFilled}>Already filled this? Navigate to the <Link to='/userform' className={styles.homepageLink}>Homepage</Link></h1>
+      <h1 className={styles.alreadyFilled}>Already filled this? Navigate to the <Link to='/userform' className={styles.homepageLink}>Userform</Link></h1>
       <h2 className={styles.formHeader}>KYC Verification</h2>
 
       {/* Display top error messages */}
