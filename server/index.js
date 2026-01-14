@@ -47,7 +47,7 @@ const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, "../loan-app/dist")));
 
 // SPA fallback: send index.html for any unknown route
-app.get("*", (req, res) => {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "../loan-app/dist/index.html"));
 });
 
